@@ -32,7 +32,7 @@
 %define gcj_support 1
 
 Name:           tagsoup
-Version:        1.0.5
+Version:        1.1.3
 Release:        %mkrel 1.1
 Epoch:          0
 Summary:        SAX-compliant parser written in Java
