@@ -33,7 +33,7 @@
 
 Name:           tagsoup
 Version:        1.1.3
-Release:        %mkrel 1.2
+Release:        %mkrel 1.3
 Epoch:          0
 Summary:        SAX-compliant parser written in Java
 License:        GPL
@@ -45,8 +45,6 @@ Group:          Development/Java
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %if %{gcj_support}
 BuildRequires:  java-gcj-compat-devel
-Requires(post): java-gcj-compat
-Requires(postun): java-gcj-compat
 %else
 BuildArch:      noarch
 BuildRequires:  java-devel >= 0:1.4.2
