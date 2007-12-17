@@ -42,7 +42,6 @@ License:        GPL
 Source0:        http://home.ccil.org/~cowan/XML/tagsoup/tagsoup-%{version}-src.zip
 URL:            http://mercury.ccil.org/~cowan/XML/tagsoup/
 Group:          Development/Java
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %if %{gcj_support}
 BuildRequires:  java-gcj-compat-devel
 %else
