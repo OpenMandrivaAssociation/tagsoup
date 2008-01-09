@@ -32,8 +32,8 @@
 %define gcj_support 1
 
 Name:           tagsoup
-Version:        1.1.3
-Release:        %mkrel 1.4
+Version:        1.2
+Release:        %mkrel 0.0.1
 Epoch:          0
 Summary:        SAX-compliant parser written in Java
 License:        GPL
@@ -87,7 +87,7 @@ install -d -m 755 $RPM_BUILD_ROOT%{_javadir}
 install -m 644 dist/lib/%{name}-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/%{name}-%{version}.jar
 ln -s %{name}-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/%{name}.jar
 install -d -m 755 $RPM_BUILD_ROOT%{_javadocdir}/%{name}-%{version}
-cp -pr docs/api/* $RPM_BUILD_ROOT%{_javadocdir}/%{name}-%{version}
+cp -a docs/api/* $RPM_BUILD_ROOT%{_javadocdir}/%{name}-%{version}
 ln -s %{name}-%{version} $RPM_BUILD_ROOT%{_javadocdir}/%{name}
 
 %if %{gcj_support}
@@ -96,6 +96,14 @@ ln -s %{name}-%{version} $RPM_BUILD_ROOT%{_javadocdir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%if %{gcj_support}
+%post
+%{update_gcjdb}
+
+%postun
+%{clean_gcjdb}
+%endif
 
 %files
 %defattr(0644,root,root,0755)
@@ -110,5 +118,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0644,root,root,0755)
 %doc %{_javadocdir}/%{name}-%{version}
 %doc %{_javadocdir}/%{name}
-
-
