@@ -33,7 +33,7 @@
 
 Name:           tagsoup
 Version:        1.2
-Release:        %mkrel 0.0.4
+Release:        %mkrel 0.0.5
 Epoch:          0
 Summary:        SAX-compliant parser written in Java
 License:        GPL
