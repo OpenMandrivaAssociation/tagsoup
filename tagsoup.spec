@@ -29,7 +29,7 @@
 #
 
 %define section free
-%define gcj_support 1
+%define gcj_support 0
 
 Name:           tagsoup
 Version:        1.2
