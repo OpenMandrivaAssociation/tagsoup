@@ -74,7 +74,7 @@ Javadoc for %{name}.
 %setup -q
 
 %build
-export CLASSPATH=
+export CLASSPATH=$(build-classpath xalan-j2-serializer xalan-j2)
 export OPT_JAR_LIST="`%{__cat} %{_sysconfdir}/ant.d/trax`"
 %{ant} \
   -Dversion=%{version} \
