@@ -1,7 +1,7 @@
 %define major %(echo %version |cut -d. -f1-2)
 Name:           tagsoup
 Version:        1.2.1
-Release:        4
+Release:        5
 Epoch:          0
 Summary:        SAX-compliant parser written in Java
 License:        GPL
