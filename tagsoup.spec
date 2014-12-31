@@ -31,7 +31,8 @@
 
 Name:           tagsoup
 Version:        1.2.1
-Release:        6.0%{?dist}
+Release:        8.1
+Group:		Development/Java
 Epoch:          0
 Summary:        A SAX-compliant HTML parser written in Java 
 # AFL/GPLv2+ license for src/java/org/ccil/cowan/tagsoup/PYXScanner.java is
@@ -99,11 +100,8 @@ cp -pr docs/api/* %{buildroot}%{_javadocdir}/%{name}
 mkdir -p %{buildroot}%{_mandir}/man1
 install -m 644 %{name}.1 %{buildroot}%{_mandir}/man1/
 
-%files
-%{_javadir}/%{name}.jar
+%files -f .mfiles
 %{_mandir}/man1/%{name}.1.gz
-%{_mavenpomdir}/JPP-%{name}.pom
-%{_mavendepmapfragdir}/%{name}
 %doc CHANGES LICENSE README TODO %{name}.txt
 
 %files javadoc
