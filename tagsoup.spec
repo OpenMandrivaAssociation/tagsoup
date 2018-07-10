@@ -31,7 +31,7 @@
 
 Name:           tagsoup
 Version:        1.2.1
-Release:        8.2
+Release:        8.3
 Group:		Development/Java
 Epoch:          0
 Summary:        A SAX-compliant HTML parser written in Java 
