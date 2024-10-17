@@ -39,7 +39,7 @@ Summary:        A SAX-compliant HTML parser written in Java
 # likely mixup of upstream but needs to be cleared up
 License:        ASL 2.0 and (GPLv2+ or AFL)
 Source0:        http://home.ccil.org/~cowan/XML/tagsoup/tagsoup-1.2.1-src.zip
-URL:            http://home.ccil.org/~cowan/XML/tagsoup/
+URL:            https://home.ccil.org/~cowan/XML/tagsoup/
 
 Source1:        http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/%{version}/tagsoup-%{version}.pom
 # fix version
